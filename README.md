@@ -4,7 +4,10 @@ Sitio web de **NEXOPARTS**, tienda de repuestos para tracto camiones y semirremo
 
 Es un sitio estático (HTML, CSS y JavaScript, sin dependencias ni compilación) con:
 
-- Catálogo con búsqueda, filtros por categoría y tipo de vehículo, y ordenamiento.
+- Hero oscuro con **búsqueda por patente** (envía la consulta por WhatsApp).
+- Botón **"Selecciona tu vehículo"** (tipo, marca, modelo y año) que filtra los repuestos compatibles.
+- Menú de categorías con submenús, franja de confianza y contador de despacho del día.
+- Catálogo con búsqueda por SKU/marca/repuesto, filtros, ordenamiento y "Ver más".
 - Carrito de compras guardado en el navegador.
 - Pedido y cotización que se envían por **WhatsApp** con el detalle ya escrito.
 - Secciones de categorías, marcas, nosotros, preguntas frecuentes y contacto.
@@ -27,6 +30,10 @@ Edita `STORE_CONFIG` en `js/products.js` con los datos reales:
 
 - `whatsapp`: número en formato internacional sin `+` ni espacios (ej. `56912345678`).
 - `phoneDisplay`, `email`, `address`.
+- `cutoffHour`: hora de corte (hora de Chile) del contador "Compra antes de las 12:00 y despachamos hoy".
+
+Las marcas del selector de vehículo están en `VEHICLE_BRANDS`. En cada producto, `fits` lista las
+marcas compatibles (vacío = multimarca) y `vehicle` indica si es para tracto, semirremolque o ambos.
 
 Los productos y precios (CLP, IVA incluido) de `PRODUCTS` son de ejemplo; reemplázalos por tu inventario.
 
